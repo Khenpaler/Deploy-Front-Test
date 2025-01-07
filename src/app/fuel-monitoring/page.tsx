@@ -107,7 +107,7 @@ const FuelMonitoring = () => {
     plugins: {
       tooltip: {
         enabled: true, // Enable tooltips
-        mode: 'index',  // Set to a valid InteractionModeMap key, like 'nearest'
+        mode: 'nearest' as InteractionMode, // Set to a valid InteractionModeMap key, like 'nearest'
         intersect: false, // Show tooltip when hovering over any point in the dataset
         callbacks: {
           title: (tooltipItem) => {
