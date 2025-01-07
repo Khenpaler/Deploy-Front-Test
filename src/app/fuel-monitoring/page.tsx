@@ -107,7 +107,7 @@ const FuelMonitoring = () => {
     plugins: {
       tooltip: {
         enabled: true, // Enable tooltips
-        mode: "index", // Display the tooltip for all items at a given index
+        mode: "nearest",// Display the tooltip for all items at a given index
         intersect: false, // Show tooltip when hovering over any point in the dataset
         callbacks: {
           title: (tooltipItem) => {
