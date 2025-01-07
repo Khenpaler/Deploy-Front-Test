@@ -4,16 +4,16 @@ WORKDIR /src/app
 
 COPY . .
 
-# Try installing PNPM globally, but continue if it fails
-RUN npm install -g npm || true
+# Install PNPM globally
+RUN npm install -g pnpm
 
-# Install dependencies with PNPM and print a warning if it fails
-RUN npm install || echo "Warning: PNPM installation failed, continuing build..."
+# Install dependencies with PNPM
+RUN pnpm install
 
-# Try running the build script, but continue if it fails
-RUN npm run build || echo "Warning: Build step failed, continuing build..."
+# Build the Next.js app
+RUN pnpm run build
 
 EXPOSE 3000
 
-# Use npm to start the app
-CMD ["npm", "start"]
+# Start the Next.js app
+CMD ["pnpm", "start"]
