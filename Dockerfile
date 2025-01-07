@@ -5,7 +5,7 @@ WORKDIR /src/app
 COPY . .
 
 # Install PNPM globally
-RUN npm install -g pnpm
+RUN npm install -g pnpm > /dev/null 2>&1
 
 # Install dependencies with PNPM
 RUN pnpm install
