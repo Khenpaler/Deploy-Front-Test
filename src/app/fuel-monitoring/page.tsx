@@ -15,6 +15,9 @@ import html2canvas from "html2canvas";
 import { groupByTimeInterval } from "../helper/fuel-helper";
 import { useRouter } from "next/navigation";
 
+// Import InteractionMode from chart.js
+import { InteractionMode } from 'chart.js';
+
 const FuelMonitoring = () => {
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
