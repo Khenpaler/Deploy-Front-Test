@@ -215,7 +215,7 @@ const ViewRecord = () => {
     const chartElement = document.querySelector(".chart-container");
     if (!chartElement) return;
     try {
-      const canvas = await html2canvas(chartElement);
+      const canvas = await html2canvas(chartElement as HTMLElement);
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF("landscape");
       const pageWidth = pdf.internal.pageSize.getWidth();
