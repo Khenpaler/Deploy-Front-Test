@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /src/app
 
-COPY ..
+COPY . .
 
 RUN npm install -g pnpm
 
