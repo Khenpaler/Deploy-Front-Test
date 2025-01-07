@@ -99,15 +99,15 @@ const FuelMonitoring = () => {
     scales: {
       x: {
         ticks: {
-          maxRotation: 45, // Adjust the rotation
-          minRotation: 0,
+          maxRotation: 90,
+          minRotation: 45,
         },
       },
     },
     plugins: {
       tooltip: {
         enabled: true, // Enable tooltips
-        mode: "nearest",// Display the tooltip for all items at a given index
+        mode: 'nearest',  // Set to a valid InteractionModeMap key, like 'nearest'
         intersect: false, // Show tooltip when hovering over any point in the dataset
         callbacks: {
           title: (tooltipItem) => {
